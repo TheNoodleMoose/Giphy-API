@@ -1,11 +1,13 @@
-var submittedButtons = [];
+var colorOptions = ["color-2","color-3","color-4", "color-5","color-6","color-7","color-8", "color-9", "color-10", "color-11"];
 
 $(".search-btn").on("click", function(event){
     event.preventDefault();
+    var randomColor = colorOptions[Math.floor(Math.random() * colorOptions.length)];
     var search = $(".searchResult").val().trim();
     console.log(search)
     var btn = $("<button>")
-    btn.addClass("gifBtn newBtn m-1 btn-hover color-4")
+    btn.addClass("gifBtn newBtn m-1 btn-hover");
+    btn.addClass(randomColor)
     btn.text(search)
     btn.attr("data", search)
     $(".buttonsGoHere").append(btn)
