@@ -1,5 +1,5 @@
 var colorOptions = ["color-2","color-3","color-4", "color-5","color-6","color-7","color-8", "color-9", "color-10", "color-11"];
-
+var gifBottom = ["gif-bottom-red", "gif-bottom-blue", "gif-bottom-purple", "gif-bottom-green"]
 $(".search-btn").on("click", function(event){
     event.preventDefault();
     var randomColor = colorOptions[Math.floor(Math.random() * colorOptions.length)];
@@ -33,6 +33,7 @@ $(".search-btn").on("click", function(event){
 $(".gifBtn").on("click", function (event) {
     event.preventDefault();
     var selection = $(this).attr("data")
+    var randomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
     console.log("This is working")
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + selection + "&api_key=oYO3qWVRQJ8coSdr6nEQg4APTLmHHhCT&limit=10";
 
@@ -45,6 +46,7 @@ $(".gifBtn").on("click", function (event) {
         for (i = 0; i < results.length; i++) {
             var images = $("<img>");
             images.addClass("gifs")
+            images.addClass(randomColor)
             images.attr("src", results[i].images.fixed_height.url);
             $("#trendingSection").prepend(images)
         }
