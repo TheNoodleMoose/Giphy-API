@@ -3,7 +3,7 @@
 $("button").on("click", function () {
     var selection = $(this).attr("data")
 
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + selection + "&api_key=oYO3qWVRQJ8coSdr6nEQg4APTLmHHhCT&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + selection + "&api_key=oYO3qWVRQJ8coSdr6nEQg4APTLmHHhCT&limit=10";
 
     $.ajax({
         url: queryURL,
