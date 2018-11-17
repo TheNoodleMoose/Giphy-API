@@ -1,0 +1,48 @@
+body {
+    background:rgb(18,18,18);
+    width: 100%
+}
+
+
+.navbar-brand {
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.bg-dark {
+    background: rgb(18,18,18) !important;
+}
+
+
+.nav-btn-a {
+    margin: 0 5px;
+    border-radius: 0;
+}
+
+.nav-btn-b {
+    margin: 0 20px;
+    border-radius: 0;
+}
+
+.nav-bar-row {
+    max-width: 1040px;
+}
+
+.gifs {
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+.gifs-section {
+    max-width: 1000px;
+    padding: 0;
+}
