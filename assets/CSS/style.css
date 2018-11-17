@@ -5,7 +5,7 @@ body {
 
 
 .navbar-brand {
-    font-size: 15px;
+    font-weight: bold;
 }
 
 .container {
@@ -40,9 +40,24 @@ body {
     margin: 5px;
     width: 200px;
     height: 200px;
+    border-bottom: 4px solid rgb(208,85,85);
 }
 
 .gifs-section {
     max-width: 1000px;
     padding: 0;
+}
+
+.github {
+    color: white !important;
+    font-weight: bold;
+    margin: 0 3px;
+    border-bottom: 3px solid rgb(26,178,255);
+}
+
+.linkedIn {
+    color: white !important;
+    font-weight: bold;
+    margin: 0 5px;
+    border-bottom: 3px solid rgb(154,51,254);
 }
