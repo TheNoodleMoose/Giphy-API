@@ -34,11 +34,19 @@ body {
     border-bottom: 3px solid rgb(26,178,255);
 }
 
+.github:hover {
+    background-color: rgba(154,51,254, .6);
+}
+
 .linkedIn {
     color: white !important;
     font-weight: bold;
     margin: 0 5px;
     border-bottom: 3px solid rgb(154,51,254);
+}
+
+.linkedIn:hover {
+    background-color: rgba(26,178,255, .6)
 }
 
 /* GIF IMAGE BORDER COLORS */
