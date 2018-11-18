@@ -4,16 +4,16 @@ My main goal with this project was to try to recreate giphy as close as I possib
 # Loading The Page
 When the page is loaded it should look similar to this(gifs for trending will be different as they update reguarly)
 
-![page-loaded](assets/images/page-loaded.jpg)
+![page-loaded](https://github.com/TheNoodleMoose/Giphy-Recreated/blob/master/assets/images/page-loaded.JPG)
 
 # Using Buttons
 When the page loads you will be greeted with some default buttons, which are search items. If you click on any of these they will produce gifs corressponding to what they say
 
 Example: If You Click on the spongebob button, you will get spongebob gifs
 
-![using-buttons](assets/images/using-buttons.jpg)
+![using-buttons](https://github.com/TheNoodleMoose/Giphy-Recreated/blob/master/assets/images/using-buttons.JPG)
 
 # Using The Search Bar
 To use the search bar, simply type in a gif you want to search and hit the button with the search icon. This will produce gifs corresponding to what you typed in. It will also generate a new button with the search term you used, so you can go back to those gifs.
 
-![UsingSearchBar](assets/images/using-search-bar.jpg)
+![UsingSearchBar](https://github.com/TheNoodleMoose/Giphy-Recreated/blob/master/assets/images/using-search-bar.JPG)
