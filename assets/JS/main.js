@@ -125,9 +125,15 @@ $(document).on("click", ".newBtn", function(){
         console.log(response)
         var results = response.data;
         for (i = 0; i < results.length; i++) {
+            var randomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
             var images = $("<img>");
             images.addClass("gifs")
-            images.attr("src", results[i].images.fixed_height.url);
+            images.addClass(randomColor)
+            //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
+            images.attr("data-state", "still")
+            images.attr("data-still", results[i].images.fixed_height_still.url)
+            images.attr("data-animate", results[i].images.fixed_height.url)
+            images.attr("src", images.attr("data-still"));
             $("#gifsGoHere").prepend(images)
         }
 
