@@ -90,6 +90,9 @@ $(".gifBtn").on("click", function (event) {
     })
 })
 
+$(".clearSearches").on("click", function() {
+    $("#gifsGoHere").empty()
+})
 
 //Remove this because pausing is not needed after grading
 $(document).on("click", ".gifs" , function() {
