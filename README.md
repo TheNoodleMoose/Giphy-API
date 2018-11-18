@@ -22,7 +22,7 @@ To use the search bar, simply type in a gif you want to search and hit the butto
 The clear searches button will wipe all the gifs that you searched, BUT your buttons will still remain. This is useful if you have a lot of searches but can't find the one you were looking for but remember what search term you used
 
 ![Using-Clear-Button](https://github.com/TheNoodleMoose/Giphy-Recreated/blob/master/assets/images/using-clear-button.JPG)
-As you can see, we searched for hello and cleared the gifs the were resulted. But our button for hello still remains!
+As you can see, we searched for hello and cleared the gifs that were resulted but our button for hello still remains!
 
 # Plans and suggestions
 I love this project and hope to continue to work on it. I want to make the trending section be a carousel that you can scroll through. If you have any suggestions let me know and I hope you enjoyed what I have created!
