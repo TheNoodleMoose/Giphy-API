@@ -13,8 +13,10 @@ var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=oYO3qWVRQJ8coSdr6
         console.log(response)
         var results = response.data;
         for (i = 0; i < results.length; i++) {
+            var randomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
             var images = $("<img>");
             images.addClass("gifs")
+            images.addClass(randomColor)
             //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
             images.attr("data-state", "still")
             images.attr("data-still", results[i].images.fixed_height_still.url)
@@ -65,7 +67,6 @@ $(".search-btn").on("click", function(event){
 $(".gifBtn").on("click", function (event) {
     event.preventDefault();
     var selection = $(this).attr("data")
-    var randomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
     console.log("This is working")
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + selection + "&api_key=oYO3qWVRQJ8coSdr6nEQg4APTLmHHhCT&limit=10";
 
@@ -76,6 +77,7 @@ $(".gifBtn").on("click", function (event) {
         console.log(response)
         var results = response.data;
         for (i = 0; i < results.length; i++) {
+            var randomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
             var images = $("<img>");
             images.addClass("gifs")
             images.addClass(randomColor)
