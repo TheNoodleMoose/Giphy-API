@@ -128,7 +128,7 @@ $(document).on("click", ".newBtn", function(){
             var images = $("<img>");
             images.addClass("gifs")
             images.attr("src", results[i].images.fixed_height.url);
-            $("#trendingSection").prepend(images)
+            $("#gifsGoHere").prepend(images)
         }
 
     })
