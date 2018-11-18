@@ -3,6 +3,7 @@ var colorOptions = ["color-2","color-3","color-4", "color-5","color-6","color-7"
 // array that holds the values for the gif classes that style the bottom
 var gifBottom = ["gif-bottom-red", "gif-bottom-blue", "gif-bottom-purple", "gif-bottom-green"]
 
+//THIS IS FOR THE TRENDING SECTION AJAX REQUEST
 var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=oYO3qWVRQJ8coSdr6nEQg4APTLmHHhCT&limit=4";
 
     $.ajax({
@@ -24,7 +25,7 @@ var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=oYO3qWVRQJ8coSdr6
 
     })
 
-//This is runs the ajax and button generating when the search button is hit
+//This is what runs the ajax and button generating when the search button is hit
 $(".search-btn").on("click", function(event){
     event.preventDefault();
     var randomColor = colorOptions[Math.floor(Math.random() * colorOptions.length)];
@@ -60,6 +61,7 @@ $(".search-btn").on("click", function(event){
     })
 })
 
+// This is what generates the gifs once the button is clicked for what they want to generate
 $(".gifBtn").on("click", function (event) {
     event.preventDefault();
     var selection = $(this).attr("data")
@@ -104,6 +106,7 @@ $(document).on("click", ".gifs" , function() {
     }
 })
 
+//This is for the newly generated buttons to get them to send the request for the ajax
 $(document).on("click", ".newBtn", function(){
     event.preventDefault();
     var selection = $(this).attr("data")
