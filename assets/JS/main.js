@@ -3,6 +3,27 @@ var colorOptions = ["color-2","color-3","color-4", "color-5","color-6","color-7"
 // array that holds the values for the gif classes that style the bottom
 var gifBottom = ["gif-bottom-red", "gif-bottom-blue", "gif-bottom-purple", "gif-bottom-green"]
 
+var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=oYO3qWVRQJ8coSdr6nEQg4APTLmHHhCT&limit=4";
+
+    $.ajax({
+        url: queryURL,
+        method: "GET",
+    }).then(function (response) {
+        console.log(response)
+        var results = response.data;
+        for (i = 0; i < results.length; i++) {
+            var images = $("<img>");
+            images.addClass("gifs")
+            //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
+            images.attr("data-state", "still")
+            images.attr("data-still", results[i].images.fixed_height_still.url)
+            images.attr("data-animate", results[i].images.fixed_height.url)
+            images.attr("src", images.attr("data-still"));
+            $("#trendingSection").prepend(images)
+        }
+
+    })
+
 //This is runs the ajax and button generating when the search button is hit
 $(".search-btn").on("click", function(event){
     event.preventDefault();
@@ -33,7 +54,7 @@ $(".search-btn").on("click", function(event){
             images.attr("data-still", results[i].images.fixed_height_still.url)
             images.attr("data-animate", results[i].images.fixed_height.url)
             images.attr("src", images.attr("data-still"));
-            $("#trendingSection").prepend(images)
+            $("#gifsGoHere").prepend(images)
         }
 
     })
@@ -61,7 +82,7 @@ $(".gifBtn").on("click", function (event) {
             images.attr("data-still", results[i].images.fixed_height_still.url)
             images.attr("data-animate", results[i].images.fixed_height.url)
             images.attr("src", images.attr("data-still"));
-            $("#trendingSection").prepend(images)
+            $("#gifsGoHere").prepend(images)
         }
 
     })
