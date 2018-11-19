@@ -1,8 +1,10 @@
 // array that holds values for the button classes to style new buttons 
 var colorOptions = ["color-2","color-3","color-4", "color-5","color-6","color-7","color-8", "color-9", "color-10", "color-11"];
 // array that holds the values for the gif classes that style the bottom
-var gifBottom = ["gif-bottom-red", "gif-bottom-blue", "gif-bottom-purple", "gif-bottom-green"]
-
+var gifBottom = ["gif-bottom-red", "gif-bottom-blue", "gif-bottom-purple", "gif-bottom-green", "gif-bottom-yellow"]
+var gifTop = ["gif-top-red", "gif-top-blue", "gif-top-purple", "gif-top-green", "gif-top-yellow"]
+var gifLeft = ["gif-left-red", "gif-left-blue", "gif-left-purple", "gif-left-green", "gif-left-yellow"]
+var gifRight = ["gif-right-red", "gif-right-blue", "gif-right-purple", "gif-right-green", "gif-right-yellow"]
 //THIS IS FOR THE TRENDING SECTION AJAX REQUEST
 var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=oYO3qWVRQJ8coSdr6nEQg4APTLmHHhCT&limit=4";
 
@@ -13,10 +15,16 @@ var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=oYO3qWVRQJ8coSdr6
         console.log(response)
         var results = response.data;
         for (i = 0; i < results.length; i++) {
-            var randomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
+            var randomBottomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
+            var randomTopColor = gifTop[Math.floor(Math.random() * gifTop.length)];
+            var randomLeftColor = gifLeft[Math.floor(Math.random() * gifLeft.length)];
+            var randomRightColor = gifRight[Math.floor(Math.random() * gifRight.length)];
             var images = $("<img>");
             images.addClass("gifs")
-            images.addClass(randomColor)
+            images.addClass(randomBottomColor)
+            images.addClass(randomTopColor)
+            images.addClass(randomLeftColor)
+            images.addClass(randomRightColor)
             //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
             images.attr("data-state", "still")
             images.attr("data-still", results[i].images.fixed_height_still.url)
@@ -49,9 +57,16 @@ $(".search-btn").on("click", function(event){
         console.log(response)
         var results = response.data;
         for (i = 0; i < results.length; i++) {
+            var randomBottomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
+            var randomTopColor = gifTop[Math.floor(Math.random() * gifTop.length)];
+            var randomLeftColor = gifLeft[Math.floor(Math.random() * gifLeft.length)];
+            var randomRightColor = gifRight[Math.floor(Math.random() * gifRight.length)];
             var images = $("<img>");
             images.addClass("gifs")
-            images.addClass(randomColor)
+            images.addClass(randomBottomColor)
+            images.addClass(randomTopColor)
+            images.addClass(randomLeftColor)
+            images.addClass(randomRightColor)     
             //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
             images.attr("data-state", "still")
             images.attr("data-still", results[i].images.fixed_height_still.url)
@@ -77,10 +92,16 @@ $(".gifBtn").on("click", function (event) {
         console.log(response)
         var results = response.data;
         for (i = 0; i < results.length; i++) {
-            var randomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
+            var randomBottomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
+            var randomTopColor = gifTop[Math.floor(Math.random() * gifTop.length)];
+            var randomLeftColor = gifLeft[Math.floor(Math.random() * gifLeft.length)];
+            var randomRightColor = gifRight[Math.floor(Math.random() * gifRight.length)];
             var images = $("<img>");
             images.addClass("gifs")
-            images.addClass(randomColor)
+            images.addClass(randomBottomColor)
+            images.addClass(randomTopColor)
+            images.addClass(randomLeftColor)
+            images.addClass(randomRightColor)  
             //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
             images.attr("data-state", "still")
             images.attr("data-still", results[i].images.fixed_height_still.url)
@@ -125,10 +146,16 @@ $(document).on("click", ".newBtn", function(){
         console.log(response)
         var results = response.data;
         for (i = 0; i < results.length; i++) {
-            var randomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
+            var randomBottomColor = gifBottom[Math.floor(Math.random() * gifBottom.length)];
+            var randomTopColor = gifTop[Math.floor(Math.random() * gifTop.length)];
+            var randomLeftColor = gifLeft[Math.floor(Math.random() * gifLeft.length)];
+            var randomRightColor = gifRight[Math.floor(Math.random() * gifRight.length)];
             var images = $("<img>");
             images.addClass("gifs")
-            images.addClass(randomColor)
+            images.addClass(randomBottomColor)
+            images.addClass(randomTopColor)
+            images.addClass(randomLeftColor)
+            images.addClass(randomRightColor)
             //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
             images.attr("data-state", "still")
             images.attr("data-still", results[i].images.fixed_height_still.url)

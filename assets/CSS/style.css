@@ -65,6 +65,73 @@ body {
     border-bottom: 4px solid rgb(4,172,105);
 }
 
+.gif-bottom-yellow {
+    border-bottom: 4px solid rgb(173,165,65);
+}
+
+/* GIF-TOP-BORDERS */
+.gif-top-blue {
+    border-top: 4px solid rgb(26,178,255);
+}
+
+.gif-top-purple {
+    border-top: 4px solid rgb(126,44,208);
+}
+
+.gif-top-red {
+    border-top: 4px solid rgb(208,85,85);
+}
+
+.gif-top-green {
+    border-top: 4px solid rgb(4,172,105);
+}
+
+.gif-top-yellow {
+    border-top: 4px solid rgb(173,165,65);
+}
+
+/* GIF LEFT BORDER */
+.gif-left-blue {
+    border-left: 4px solid rgb(26,178,255);
+}
+
+.gif-left-purple {
+    border-left: 4px solid rgb(126,44,208);
+}
+
+.gif-left-red {
+    border-left: 4px solid rgb(208,85,85);
+}
+
+.gif-left-green {
+    border-left: 4px solid rgb(4,172,105);
+}
+
+.gif-left-yellow {
+    border-left: 4px solid rgb(173,165,65);
+}
+
+/* GIF RIGHT BORDER */
+.gif-right-blue {
+    border-right: 4px solid rgb(26,178,255);
+}
+
+.gif-right-purple {
+    border-right: 4px solid rgb(126,44,208);
+}
+
+.gif-right-red {
+    border-right: 4px solid rgb(208,85,85);
+}
+
+.gif-right-green {
+    border-right: 4px solid rgb(4,172,105);
+}
+
+.gif-right-yellow {
+    border-right: 4px solid rgb(173,165,65);
+}
+
     /* BUTTON COLORS AND STYLEING */
 /*<=================================>*/
 .btn-hover {
