@@ -25,11 +25,7 @@ var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=oYO3qWVRQJ8coSdr6
             images.addClass(randomTopColor)
             images.addClass(randomLeftColor)
             images.addClass(randomRightColor)
-            //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
-            images.attr("data-state", "still")
-            images.attr("data-still", results[i].images.fixed_height_still.url)
-            images.attr("data-animate", results[i].images.fixed_height.url)
-            images.attr("src", images.attr("data-still"));
+            images.attr("src", results[i].images.fixed_height.url);
             $("#trendingSection").prepend(images)
         }
 
@@ -67,11 +63,7 @@ $(".search-btn").on("click", function(event){
             images.addClass(randomTopColor)
             images.addClass(randomLeftColor)
             images.addClass(randomRightColor)     
-            //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
-            images.attr("data-state", "still")
-            images.attr("data-still", results[i].images.fixed_height_still.url)
-            images.attr("data-animate", results[i].images.fixed_height.url)
-            images.attr("src", images.attr("data-still"));
+            images.attr("src", results[i].images.fixed_height.url);
             $("#gifsGoHere").prepend(images)
         }
 
@@ -102,11 +94,7 @@ $(".gifBtn").on("click", function (event) {
             images.addClass(randomTopColor)
             images.addClass(randomLeftColor)
             images.addClass(randomRightColor)  
-            //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
-            images.attr("data-state", "still")
-            images.attr("data-still", results[i].images.fixed_height_still.url)
-            images.attr("data-animate", results[i].images.fixed_height.url)
-            images.attr("src", images.attr("data-still"));
+            images.attr("src", results[i].images.fixed_height.url);
             $("#gifsGoHere").prepend(images)
         }
 
@@ -115,21 +103,6 @@ $(".gifBtn").on("click", function (event) {
 
 $(".clearSearches").on("click", function() {
     $("#gifsGoHere").empty()
-})
-
-//Remove this because pausing is not needed after grading
-$(document).on("click", ".gifs" , function() {
-    var state = $(this).attr("data-state")
-
-    if(state === "still") {
-        $(this).attr("src", $(this).attr("data-animate"))
-        $(this).attr("data-state", "animate")
-    }
-
-    if(state === "animate") {
-        $(this).attr("src", $(this).attr("data-still"))
-        $(this).attr("data-state", "still")
-    }
 })
 
 //This is for the newly generated buttons to get them to send the request for the ajax
@@ -157,10 +130,7 @@ $(document).on("click", ".newBtn", function(){
             images.addClass(randomLeftColor)
             images.addClass(randomRightColor)
             //After graded rememeber to remove the the still image feature because its not necessary, src will just go back to fix_height.url
-            images.attr("data-state", "still")
-            images.attr("data-still", results[i].images.fixed_height_still.url)
-            images.attr("data-animate", results[i].images.fixed_height.url)
-            images.attr("src", images.attr("data-still"));
+            images.attr("src", results[i].images.fixed_height.url);
             $("#gifsGoHere").prepend(images)
         }
 
